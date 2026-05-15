@@ -540,134 +540,304 @@ footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
 <!--1. HERO-->
 <section id="hero">
 <svg class="topo-svg" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+<defs>
+  <clipPath id="c"><rect width="1600" height="900"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
 
-  <!-- STRATO LONTANO: profilo continuo di edifici più bassi, più in prospettiva -->
-  <path fill="rgba(174,199,249,0.18)"
-    d="
-      M0,900
-      L0,680
-      L40,680 L40,640 L80,640 L80,620 L120,620 L120,640 L130,640 L130,610
-      L160,610 L160,595 L190,595 L190,610 L200,610 L200,580
-      L230,580 L230,565 L260,565 L260,580 L280,580 L280,545
-      L310,545 L310,530 L340,530 L340,545 L360,545 L360,560
-      L390,560 L390,530 L420,530 L420,510 L460,510 L460,530
-      L490,530 L490,545 L520,545 L520,515
-      L545,515 L545,500 L570,500 L570,515 L600,515 L600,535
-      L630,535 L630,515 L660,515 L660,500 L695,500 L695,480
-      L720,480 L720,495 L750,495 L750,515 L775,515 L775,490
-      L805,490 L805,475 L835,475 L835,490 L865,490 L865,510
-      L890,510 L890,490 L920,490 L920,475
-      L950,475 L950,458 L985,458 L985,475 L1010,475 L1010,495
-      L1040,495 L1040,475 L1070,475 L1070,458
-      L1100,458 L1100,442 L1130,442 L1130,458 L1160,458 L1160,478
-      L1185,478 L1185,460 L1210,460 L1210,445
-      L1235,445 L1235,428 L1265,428 L1265,445 L1295,445 L1295,465
-      L1320,465 L1320,445 L1350,445 L1350,430
-      L1378,430 L1378,415 L1405,415 L1405,430 L1435,430 L1435,450
-      L1460,450 L1460,435 L1490,435 L1490,418
-      L1515,418 L1515,435 L1545,435 L1545,455
-      L1570,455 L1570,438 L1600,438
-      L1600,900 Z
-    "
-  />
+<!-- =====================================================
+     LAYER SFONDO — edifici più piccoli, più lontani
+     Colore base: rgba(120,170,210,0.38)
+     Stroke: rgba(255,255,255,0.18) per separare le facciate
+     ===================================================== -->
 
-  <!-- STRATO PRIMO PIANO: skyline continuo, edifici più alti e riconoscibili -->
-  <!-- Costruito come sequenza di rettangoli + tetti attaccati, tutto unito -->
-  <path fill="rgba(174,199,249,0.32)"
-    d="
-      M0,900
-      L0,600
-      
-      L0,560 L38,560 L38,580 L58,580
-      L58,520 L78,520 L78,500 L108,500 L108,520 L128,520
-      L128,480 L158,480 L158,460 L188,460 L188,480 L210,480
-      L210,450 L240,450 L240,430 L268,430 L268,450 L295,450
-      L295,420 L310,420 L310,400
-      L340,400 L340,385 L375,385 L375,400 L410,400
-      L410,430 L440,430 L440,410 L465,410 L465,390
-      L495,390 L495,375 L520,375 L520,390 L548,390
-      L548,365 L565,365 L565,348 L590,348 L590,365 L608,365
-      L608,390 L630,390 L630,370 L655,370 L655,350
-      L682,350 L682,332 L712,332 L712,350 L738,350
-      L738,375 L760,375 L760,355 L782,355 L782,338
-      L808,338 L808,320 L838,320 L838,338 L862,338
-      L862,360 L885,360 L885,340 L910,340 L910,322
-      L938,322 L938,305 L968,305 L968,322 L995,322
-      L995,342 L1018,342 L1018,322 L1042,322 L1042,305
-      L1068,305 L1068,288 L1098,288 L1098,305 L1125,305
-      L1125,325 L1148,325 L1148,308 L1172,308 L1172,292
-      L1198,292 L1198,275 L1228,275 L1228,292 L1255,292
-      L1255,312 L1278,312 L1278,295 L1302,295 L1302,278
-      L1328,278 L1328,262 L1355,262 L1355,278 L1380,278
-      L1380,298 L1402,298 L1402,280 L1425,280 L1425,262
-      L1450,262 L1450,246 L1478,246 L1478,262 L1505,262
-      L1505,282 L1528,282 L1528,265 L1552,265 L1552,248
-      L1578,248 L1578,265 L1600,265
-      L1600,900 Z
-    "
-  />
+<!-- Casa 1 -->
+<rect x="0"    y="680" width="90"  height="220" fill="rgba(130,175,218,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="0,680 45,645 90,680" fill="rgba(155,195,235,0.42)"/>
+<rect x="12"   y="700" width="22" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="56"   y="700" width="22" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="12"   y="742" width="22" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="56"   y="742" width="22" height="28" fill="rgba(218,227,67,0.22)"/>
+<!-- Casa 2 -->
+<rect x="90"   y="650" width="70"  height="250" fill="rgba(120,168,212,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="90,650 125,618 160,650" fill="rgba(150,192,232,0.42)"/>
+<rect x="103"  y="668" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="130"  y="668" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="103"  y="704" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="130"  y="704" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<!-- Palazzina 3 con frontone -->
+<rect x="160"  y="620" width="120" height="280" fill="rgba(128,172,215,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="175"  y="598" width="90"  height="22" fill="rgba(148,190,230,0.42)"/>
+<polygon points="175,598 220,568 265,598" fill="rgba(160,200,238,0.45)"/>
+<rect x="172"  y="638" width="24" height="32" fill="rgba(218,227,67,0.22)"/>
+<rect x="208"  y="638" width="24" height="32" fill="rgba(218,227,67,0.22)"/>
+<rect x="244"  y="638" width="24" height="32" fill="rgba(218,227,67,0.22)"/>
+<rect x="172"  y="682" width="24" height="32" fill="rgba(218,227,67,0.22)"/>
+<rect x="208"  y="682" width="24" height="32" fill="rgba(218,227,67,0.22)"/>
+<rect x="244"  y="682" width="24" height="32" fill="rgba(218,227,67,0.22)"/>
+<!-- Casa 4 stretta -->
+<rect x="280"  y="655" width="65"  height="245" fill="rgba(125,170,213,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="280,655 312,625 345,655" fill="rgba(152,193,233,0.42)"/>
+<rect x="293"  y="672" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="320"  y="672" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<!-- Palazzina 5 -->
+<rect x="345"  y="635" width="100" height="265" fill="rgba(132,176,218,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="358"  y="615" width="74"  height="20" fill="rgba(148,190,230,0.42)"/>
+<polygon points="358,615 395,586 432,615" fill="rgba(158,198,236,0.45)"/>
+<rect x="358"  y="652" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="392"  y="652" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="358"  y="694" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="392"  y="694" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<!-- Casa 6 -->
+<rect x="445"  y="660" width="75"  height="240" fill="rgba(122,168,211,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="445,660 482,628 520,660" fill="rgba(150,192,232,0.42)"/>
+<rect x="458"  y="678" width="20" height="26" fill="rgba(218,227,67,0.22)"/>
+<rect x="488"  y="678" width="20" height="26" fill="rgba(218,227,67,0.22)"/>
+<!-- Palazzina 7 alta -->
+<rect x="520"  y="610" width="95"  height="290" fill="rgba(130,174,216,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="533"  y="590" width="69"  height="20" fill="rgba(148,190,230,0.42)"/>
+<polygon points="533,590 567,562 601,590" fill="rgba(158,198,236,0.45)"/>
+<rect x="533"  y="628" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="565"  y="628" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="597"  y="628" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="533"  y="668" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="565"  y="668" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="597"  y="668" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<!-- Casa 8 -->
+<rect x="615"  y="648" width="72"  height="252" fill="rgba(126,171,214,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="615,648 651,616 687,648" fill="rgba(152,193,233,0.42)"/>
+<rect x="628"  y="665" width="20" height="26" fill="rgba(218,227,67,0.22)"/>
+<rect x="658"  y="665" width="20" height="26" fill="rgba(218,227,67,0.22)"/>
+<!-- Palazzina 9 con attico -->
+<rect x="687"  y="625" width="88"  height="275" fill="rgba(128,173,215,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="700"  y="600" width="62"  height="25" fill="rgba(145,188,228,0.42)"/>
+<polygon points="700,600 731,572 762,600" fill="rgba(158,198,236,0.45)"/>
+<rect x="700"  y="643" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="733"  y="643" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="700"  y="683" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="733"  y="683" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<!-- Case 10-11 -->
+<rect x="775"  y="655" width="65"  height="245" fill="rgba(124,170,212,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="775,655 807,624 840,655" fill="rgba(150,192,232,0.42)"/>
+<rect x="788"  y="672" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="815"  y="672" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="840"  y="640" width="80"  height="260" fill="rgba(130,175,217,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="840,640 880,608 920,640" fill="rgba(152,193,233,0.42)"/>
+<rect x="854"  y="658" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="886"  y="658" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="854"  y="698" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="886"  y="698" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<!-- Palazzina 12 -->
+<rect x="920"  y="618" width="100" height="282" fill="rgba(128,172,215,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="933"  y="598" width="74"  height="20" fill="rgba(145,188,228,0.42)"/>
+<polygon points="933,598 970,568 1007,598" fill="rgba(158,198,236,0.45)"/>
+<rect x="933"  y="636" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="967"  y="636" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="1001" y="636" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<!-- Case 13-14 -->
+<rect x="1020" y="650" width="70"  height="250" fill="rgba(126,171,214,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="1020,650 1055,618 1090,650" fill="rgba(150,192,232,0.42)"/>
+<rect x="1033" y="668" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="1062" y="668" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="1090" y="632" width="85"  height="268" fill="rgba(130,174,216,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="1090,632 1132,600 1175,632" fill="rgba(152,193,233,0.42)"/>
+<rect x="1103" y="650" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="1136" y="650" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="1165" y="642" width="75"  height="258" fill="rgba(125,170,213,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="1165,642 1202,610 1240,642" fill="rgba(150,192,232,0.42)"/>
+<rect x="1178" y="660" width="20" height="26" fill="rgba(218,227,67,0.22)"/>
+<rect x="1210" y="660" width="20" height="26" fill="rgba(218,227,67,0.22)"/>
+<!-- Palazzina 15 finale -->
+<rect x="1240" y="622" width="95"  height="278" fill="rgba(128,173,215,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="1253" y="602" width="69"  height="20" fill="rgba(148,190,230,0.42)"/>
+<polygon points="1253,602 1287,574 1322,602" fill="rgba(158,198,236,0.45)"/>
+<rect x="1253" y="640" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="1285" y="640" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="1317" y="640" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<!-- Case finali -->
+<rect x="1335" y="645" width="68"  height="255" fill="rgba(126,171,214,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="1335,645 1369,613 1403,645" fill="rgba(150,192,232,0.42)"/>
+<rect x="1348" y="663" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="1377" y="663" width="18" height="24" fill="rgba(218,227,67,0.22)"/>
+<rect x="1403" y="635" width="80"  height="265" fill="rgba(130,175,217,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<polygon points="1403,635 1443,603 1483,635" fill="rgba(152,193,233,0.42)"/>
+<rect x="1417" y="653" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="1450" y="653" width="20" height="28" fill="rgba(218,227,67,0.22)"/>
+<rect x="1483" y="648" width="117" height="252" fill="rgba(128,172,215,0.38)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+<rect x="1496" y="628" width="91"  height="20" fill="rgba(148,190,230,0.42)"/>
+<polygon points="1496,628 1541,596 1586,628" fill="rgba(158,198,236,0.45)"/>
+<rect x="1497" y="666" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="1533" y="666" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
+<rect x="1569" y="666" width="22" height="30" fill="rgba(218,227,67,0.22)"/>
 
-  <!-- DETTAGLI: tetti a spiovente sovrapposti al profilo per dare leggibilità -->
-  <g fill="rgba(174,199,249,0.22)">
-    <!-- gruppo case a sinistra con timpani -->
-    <polygon points="58,520  93,485  128,520"/>
-    <polygon points="158,480 188,448 218,480"/>
-    <polygon points="240,450 268,418 295,450"/>
+<!-- =====================================================
+     LAYER PRIMO PIANO — ville e palazzi principali, ben definiti
+     Colore base: rgba(100,148,198,0.62)
+     Stroke: rgba(255,255,255,0.30) netto
+     ===================================================== -->
 
-    <!-- palazzina con timpano centro-sx -->
-    <polygon points="310,400 352,368 395,400"/>
-    <!-- torrino sopra -->
-    <rect x="340" y="340" width="24" height="45"/>
-    <polygon points="340,340 352,320 364,340"/>
+<!-- VILLA A — grande palazzo con colonne sx -->
+<rect x="0"    y="420" width="220" height="480" fill="rgba(95,145,195,0.62)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<!-- frontone classico -->
+<polygon points="0,420 110,348 220,420" fill="rgba(118,165,212,0.65)"/>
+<!-- cornicione -->
+<rect x="0"    y="402" width="220" height="18" fill="rgba(80,130,180,0.55)"/>
+<!-- colonne 6x -->
+<rect x="18"   y="420" width="14" height="105" fill="rgba(70,120,172,0.60)"/>
+<rect x="48"   y="420" width="14" height="105" fill="rgba(70,120,172,0.60)"/>
+<rect x="78"   y="420" width="14" height="105" fill="rgba(70,120,172,0.60)"/>
+<rect x="108"  y="420" width="14" height="105" fill="rgba(70,120,172,0.60)"/>
+<rect x="138"  y="420" width="14" height="105" fill="rgba(70,120,172,0.60)"/>
+<rect x="168"  y="420" width="14" height="105" fill="rgba(70,120,172,0.60)"/>
+<!-- portale ingresso -->
+<rect x="87"   y="548" width="46" height="352" fill="rgba(65,115,168,0.60)"/>
+<rect x="87"   y="548" width="46" height="16"  fill="rgba(50,100,155,0.65)"/>
+<!-- finestre grandi, chiare -->
+<rect x="16"   y="450" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="64"   y="450" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="148"  y="450" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="168"  y="450" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="16"   y="514" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="64"   y="514" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="148"  y="514" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
+<rect x="168"  y="514" width="36" height="50" fill="rgba(218,235,249,0.38)"/>
 
-    <!-- coppia di ville centro -->
-    <polygon points="465,390 507,358 548,390"/>
-    <polygon points="608,390 638,360 668,390"/>
+<!-- VILLA B — casa a schiera larga con tetto a due falde -->
+<rect x="220"  y="470" width="170" height="430" fill="rgba(92,142,192,0.62)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="220,470 305,405 390,470" fill="rgba(115,162,210,0.65)"/>
+<rect x="220"  y="454" width="170" height="16" fill="rgba(78,128,178,0.55)"/>
+<rect x="240"  y="490" width="30" height="42" fill="rgba(218,235,249,0.38)"/>
+<rect x="284"  y="490" width="30" height="42" fill="rgba(218,235,249,0.38)"/>
+<rect x="328"  y="490" width="30" height="42" fill="rgba(218,235,249,0.38)"/>
+<rect x="240"  y="546" width="30" height="42" fill="rgba(218,235,249,0.38)"/>
+<rect x="284"  y="546" width="30" height="42" fill="rgba(218,235,249,0.38)"/>
+<rect x="328"  y="546" width="30" height="42" fill="rgba(218,235,249,0.38)"/>
+<!-- porta ingresso -->
+<rect x="288"  y="618" width="44" height="282" fill="rgba(65,115,168,0.60)"/>
 
-    <!-- ville con frontone centro -->
-    <polygon points="682,350 725,308 768,350"/>
-    <polygon points="808,320 853,278 898,320"/>
+<!-- PALAZZO C — palazzo nobile con pilastri e attico -->
+<rect x="390"  y="380" width="280" height="520" fill="rgba(98,148,198,0.65)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<!-- attico rialzato -->
+<rect x="420"  y="340" width="220" height="40"  fill="rgba(112,160,208,0.65)"/>
+<polygon points="420,340 530,278 640,340" fill="rgba(125,172,218,0.68)"/>
+<!-- cornicione -->
+<rect x="390"  y="362" width="280" height="18"  fill="rgba(82,132,182,0.58)"/>
+<!-- pilastri -->
+<rect x="408"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="440"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="472"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="504"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="536"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="568"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="600"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<rect x="632"  y="380" width="14" height="130" fill="rgba(72,122,175,0.62)"/>
+<!-- finestre 2 file x 4 -->
+<rect x="402"  y="524" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="456"  y="524" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="510"  y="524" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="564"  y="524" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="618"  y="524" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="402"  y="590" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="456"  y="590" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="510"  y="590" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="564"  y="590" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<rect x="618"  y="590" width="38" height="52" fill="rgba(218,235,249,0.40)"/>
+<!-- portale ad arco -->
+<rect x="494"  y="558" width="62" height="342" fill="rgba(68,118,170,0.62)"/>
+<rect x="494"  y="558" width="62" height="18"  fill="rgba(55,105,158,0.68)"/>
 
-    <!-- palazzine destra -->
-    <polygon points="938,322 983,282 1028,322"/>
-    <polygon points="1068,288 1113,248 1158,288"/>
+<!-- VILLA D — villa con torrette laterali -->
+<rect x="670"  y="400" width="260" height="500" fill="rgba(95,145,196,0.62)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="670,400 800,328 930,400" fill="rgba(118,165,212,0.65)"/>
+<rect x="670"  y="382" width="260" height="18"  fill="rgba(80,130,182,0.55)"/>
+<!-- torretta sx -->
+<rect x="670"  y="316" width="52" height="120" fill="rgba(108,156,205,0.65)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="670,316 696,285 722,316" fill="rgba(125,172,218,0.68)"/>
+<!-- torretta dx -->
+<rect x="878"  y="316" width="52" height="120" fill="rgba(108,156,205,0.65)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="878,316 904,285 930,316" fill="rgba(125,172,218,0.68)"/>
+<!-- colonne centrali -->
+<rect x="698"  y="418" width="12" height="100" fill="rgba(72,122,175,0.60)"/>
+<rect x="726"  y="418" width="12" height="100" fill="rgba(72,122,175,0.60)"/>
+<rect x="754"  y="418" width="12" height="100" fill="rgba(72,122,175,0.60)"/>
+<rect x="822"  y="418" width="12" height="100" fill="rgba(72,122,175,0.60)"/>
+<rect x="850"  y="418" width="12" height="100" fill="rgba(72,122,175,0.60)"/>
+<rect x="878"  y="418" width="12" height="100" fill="rgba(72,122,175,0.60)"/>
+<!-- finestre -->
+<rect x="688"  y="532" width="36" height="48" fill="rgba(218,235,249,0.40)"/>
+<rect x="738"  y="532" width="36" height="48" fill="rgba(218,235,249,0.40)"/>
+<rect x="826"  y="532" width="36" height="48" fill="rgba(218,235,249,0.40)"/>
+<rect x="876"  y="532" width="36" height="48" fill="rgba(218,235,249,0.40)"/>
+<rect x="688"  y="594" width="36" height="48" fill="rgba(218,235,249,0.40)"/>
+<rect x="876"  y="594" width="36" height="48" fill="rgba(218,235,249,0.40)"/>
+<!-- ingresso centrale -->
+<rect x="764"  y="536" width="72" height="364" fill="rgba(65,115,168,0.60)"/>
+<rect x="764"  y="536" width="72" height="18"  fill="rgba(52,102,156,0.65)"/>
 
-    <!-- ville serie dx -->
-    <polygon points="1198,275 1241,238 1285,275"/>
-    <polygon points="1302,278 1340,242 1378,278"/>
+<!-- PALAZZO E — edificio signorile con balcone -->
+<rect x="930"  y="440" width="200" height="460" fill="rgba(92,142,192,0.62)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<rect x="950"  y="408" width="160" height="32"  fill="rgba(108,156,205,0.65)"/>
+<polygon points="950,408 1030,365 1110,408" fill="rgba(122,168,215,0.68)"/>
+<rect x="930"  y="422" width="200" height="18"  fill="rgba(78,128,178,0.55)"/>
+<!-- balcone -->
+<rect x="975"  y="490" width="80"  height="12"  fill="rgba(65,115,168,0.65)"/>
+<rect x="970"  y="502" width="90"  height="5"   fill="rgba(60,110,163,0.50)"/>
+<!-- finestre -->
+<rect x="944"  y="460" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="992"  y="460" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="1040" y="460" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="1088" y="460" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="944"  y="520" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="1088" y="520" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="944"  y="580" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="992"  y="580" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="1040" y="580" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<rect x="1088" y="580" width="34" height="46" fill="rgba(218,235,249,0.40)"/>
+<!-- porta -->
+<rect x="994"  y="556" width="52" height="344" fill="rgba(65,115,168,0.60)"/>
 
-    <!-- gruppo case dx -->
-    <polygon points="1425,262 1464,222 1503,262"/>
-    <polygon points="1528,265 1565,228 1600,265"/>
+<!-- VILLA F — grande villa liberty dx -->
+<rect x="1130" y="390" width="250" height="510" fill="rgba(98,148,198,0.65)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="1130,390 1255,318 1380,390" fill="rgba(120,167,214,0.68)"/>
+<rect x="1130" y="372" width="250" height="18"  fill="rgba(82,132,182,0.55)"/>
+<!-- torrino angolare dx -->
+<rect x="1340" y="305" width="48" height="110" fill="rgba(110,158,207,0.65)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="1340,305 1364,275 1388,305" fill="rgba(128,174,220,0.68)"/>
+<!-- colonne -->
+<rect x="1150" y="408" width="14" height="110" fill="rgba(72,122,175,0.60)"/>
+<rect x="1182" y="408" width="14" height="110" fill="rgba(72,122,175,0.60)"/>
+<rect x="1214" y="408" width="14" height="110" fill="rgba(72,122,175,0.60)"/>
+<rect x="1246" y="408" width="14" height="110" fill="rgba(72,122,175,0.60)"/>
+<rect x="1278" y="408" width="14" height="110" fill="rgba(72,122,175,0.60)"/>
+<rect x="1310" y="408" width="14" height="110" fill="rgba(72,122,175,0.60)"/>
+<!-- finestre 3 file -->
+<rect x="1142" y="530" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<rect x="1196" y="530" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<rect x="1250" y="530" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<rect x="1304" y="530" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<rect x="1142" y="596" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<rect x="1196" y="596" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<rect x="1304" y="596" width="40" height="54" fill="rgba(218,235,249,0.40)"/>
+<!-- porta -->
+<rect x="1215" y="556" width="60" height="344" fill="rgba(65,115,168,0.60)"/>
+<rect x="1215" y="556" width="60" height="18"  fill="rgba(52,102,156,0.65)"/>
 
-    <!-- dettaglio: finestre come piccoli rettangoli sul profilo primo piano -->
-    <!-- sx -->
-    <rect x="68"  y="530" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="168" y="468" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="250" y="438" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="322" y="408" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="356" y="408" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <!-- centro -->
-    <rect x="480" y="398" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="534" y="378" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="620" y="378" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="695" y="358" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="720" y="358" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="820" y="328" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="848" y="328" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <!-- dx -->
-    <rect x="950" y="330" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="980" y="330" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1080" y="296" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1108" y="296" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1210" y="282" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1238" y="282" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1340" y="268" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1368" y="268" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1436" y="250" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-    <rect x="1488" y="252" width="14" height="18" fill="rgba(218,227,67,0.20)"/>
-  </g>
+<!-- CASA G — casale toscano chiusura dx -->
+<rect x="1380" y="460" width="220" height="440" fill="rgba(90,140,190,0.62)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<polygon points="1380,460 1490,390 1600,460" fill="rgba(112,160,208,0.65)"/>
+<rect x="1380" y="444" width="220" height="16"  fill="rgba(76,126,176,0.55)"/>
+<rect x="1398" y="478" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1450" y="478" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1502" y="478" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1554" y="478" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1398" y="542" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1450" y="542" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1502" y="542" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1554" y="542" width="36" height="50" fill="rgba(218,235,249,0.40)"/>
+<rect x="1452" y="614" width="76" height="286" fill="rgba(65,115,168,0.60)"/>
+<rect x="1452" y="614" width="76" height="16"  fill="rgba(52,102,156,0.65)"/>
 
+</g>
 </svg>
 
 <div class="hero-left">
