@@ -331,23 +331,27 @@ justify-content: center;
 gap: 20px;
 }
 .proj-card {
-border-radius: 12px; overflow: hidden;
+border-radius: 12px;
 border: 1px solid rgba(255,255,255,0.08);
 background: var(--slate);
 display: flex; flex-direction: column;
 transition: transform .25s, box-shadow .25s;
 cursor: pointer;
-}
-.proj-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-.proj-img {
-width: 100%; height: 300px;
-background-size: cover;
-background-position: center;
-flex-shrink: 0;
-transition: transform .4s ease;
 overflow: hidden;
 }
-.proj-card:hover .proj-img { transform: scale(1.04); }
+.proj-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+.proj-img-wrap {
+width: 100%; height: 220px;
+overflow: hidden;
+flex-shrink: 0;
+}
+.proj-img {
+width: 100%; height: 100%;
+background-size: cover;
+background-position: center;
+transition: transform .5s ease;
+}
+.proj-card:hover .proj-img { transform: scale(1.05); }
 .proj-body { padding: 22px 24px 24px; flex: 1; }
 .proj-tag {
 font-family: 'DM Mono', monospace; font-size: 9px;
@@ -744,7 +748,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
   <div class="proj-grid reveal">
     <!-- Card 1 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('megStudio_Barcis.jpg') center 60%/cover no-repeat;"></div>
+      <div class="proj-img-wrap"><div class="proj-img" style="background: url('megStudio_Barcis.jpg') center 60%/cover no-repeat;"></div></div>
       <div class="proj-body">
         <span class="proj-tag">Infrastruttura · Zona Montana · FVG</span>
         <div class="proj-name">Ponte sul Lago di Barcis</div>
@@ -758,7 +762,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
     </div>
     <!-- Card 2 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('P23010 - PALAZZETTO DELLO SPORT SAPPADA.png') center 30%/cover no-repeat;"></div>
+      <div class="proj-img-wrap"><div class="proj-img" style="background: url('P23010 - PALAZZETTO DELLO SPORT SAPPADA.png') center 30%/cover no-repeat;"></div></div>
       <div class="proj-body">
         <span class="proj-tag">Sport · Zona Montana · FVG</span>
         <div class="proj-name">Nuovo Palasport a Sappada</div>
@@ -772,7 +776,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
     </div>
     <!-- Card 3 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('250909_MEG_ZARA_V3_1_0060.jpg') center 55%/cover no-repeat;"></div>
+      <div class="proj-img-wrap"><div class="proj-img" style="background: url('250909_MEG_ZARA_V3_1_0060.jpg') center 55%/cover no-repeat;"></div></div>
       <div class="proj-body">
         <span class="proj-tag">Infrastruttura · Mobilità dolce · Veneto</span>
         <div class="proj-name">Ciclovia del Garda - Monte Baldo</div>
@@ -786,7 +790,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
     </div>
     <!-- Card 4 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('Modellino.jpg') center center/cover no-repeat;"></div>
+      <div class="proj-img-wrap"><div class="proj-img" style="background: url('Modellino.jpg') center center/cover no-repeat;"></div></div>
       <div class="proj-body">
         <span class="proj-tag">Sport · Zona Montana · FVG</span>
         <div class="proj-name">Area Sportiva ad Ampezzo</div>
