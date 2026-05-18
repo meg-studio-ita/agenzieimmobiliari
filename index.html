@@ -540,45 +540,25 @@ footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
 </defs>
 <g clip-path="url(#c)">
 
-  <!-- ── LAYER 1: distant — very flat, wide blocks, low ── -->
-  <polygon points="
-    -20,520 -20,400
-    80,400  80,370  200,370  200,400
-    260,400 260,350 400,350 400,400
-    460,400 460,360 580,360 580,400
-    640,400 640,355 760,355 760,400
-    820,400 820,375 920,375 920,520
-  " fill="rgba(255,255,255,0.04)"/>
+  <!-- ── LAYER 1: furthest — large wide block, center-right ── -->
+  <!-- Palazzina A: flat roof, 4 storeys, very wide -->
+  <polygon points="200,520 200,310 220,295 680,295 700,310 700,520"
+    fill="rgba(255,255,255,0.04)"/>
 
-  <!-- ── LAYER 2: mid — low-rise blocks with pitched roofs, wider spans ── -->
-  <polygon points="
-    -20,520 -20,420
-    0,420   0,360   80,360  80,420
-    100,420 100,340 160,340 160,420
-    180,420 180,310 220,275 260,310 260,420
-    280,420 280,330 380,330 380,420
-    400,420 400,300 450,265 500,300 500,420
-    520,420 520,320 620,320 620,420
-    640,420 640,305 690,270 740,305 740,420
-    760,420 760,345 860,345 860,420
-    880,420 880,380 920,380 920,520
-  " fill="rgba(255,255,255,0.06)"/>
+  <!-- ── LAYER 2: mid — two overlapping blocks ── -->
+  <!-- Palazzina B: left, slightly taller (but only by 20px), wide -->
+  <polygon points="-20,520 -20,320 -10,305 420,305 430,320 430,520"
+    fill="rgba(255,255,255,0.06)"/>
+  <!-- Palazzina C: right, same scale -->
+  <polygon points="470,520 470,315 480,300 940,300 940,520"
+    fill="rgba(255,255,255,0.05)"/>
 
-  <!-- ── LAYER 3: foreground — slightly taller but still low-rise, with more gables ── -->
-  <polygon points="
-    -20,520 -20,430
-    0,430   0,370   60,370  60,430
-    80,430  80,340  120,300 160,340 160,430
-    180,430 180,310 300,310 300,430
-    320,430 320,280 370,245 420,280 420,430
-    440,430 440,295 540,295 540,430
-    560,430 560,265 610,232 660,265 660,430
-    680,430 680,310 780,310 780,430
-    800,430 800,300 840,268 880,300 880,430
-    920,430 920,520
-  " fill="rgba(255,255,255,0.07)"/>
+  <!-- ── LAYER 3: foreground — dominant block, slightly lower/closer ── -->
+  <!-- Palazzina D: wide, front center, flat roof -->
+  <polygon points="60,520 60,340 75,328 760,328 775,340 775,520"
+    fill="rgba(255,255,255,0.07)"/>
 
-  <!-- ── GROUND BAND ── -->
+  <!-- ── LAYER 4: ground plane ── -->
   <rect x="-20" y="472" width="940" height="48" fill="rgba(255,255,255,0.03)"/>
 
   <!-- ══ TECHNICAL OVERLAY ══ -->
@@ -610,15 +590,15 @@ footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
   <!-- Ground accent -->
   <line x1="0" y1="472" x2="900" y2="472" stroke="rgba(174,199,249,0.30)" stroke-width="1"/>
 
-  <!-- Construction axis — aligns with tallest gable peak in layer 3 -->
-  <line x1="610" y1="0" x2="610" y2="468" stroke="rgba(174,199,249,0.20)" stroke-width="0.8" stroke-dasharray="5,7"/>
+  <!-- Construction axis — vertical through center of foreground block -->
+  <line x1="418" y1="0" x2="418" y2="468" stroke="rgba(174,199,249,0.20)" stroke-width="0.8" stroke-dasharray="5,7"/>
 
-  <!-- Height dimension — from tallest peak (232) to ground (472) -->
-  <line x1="668" y1="232" x2="680" y2="232" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
-  <line x1="668" y1="472" x2="680" y2="472" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
-  <line x1="674" y1="238" x2="674" y2="466" stroke="rgba(174,199,249,0.30)" stroke-width="0.8"/>
-  <polyline points="671,239 674,232 677,239" fill="none" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
-  <polyline points="671,465 674,472 677,465" fill="none" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
+  <!-- Height dimension — foreground block height -->
+  <line x1="782" y1="328" x2="794" y2="328" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
+  <line x1="782" y1="472" x2="794" y2="472" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
+  <line x1="788" y1="334" x2="788" y2="466" stroke="rgba(174,199,249,0.30)" stroke-width="0.8"/>
+  <polyline points="785,335 788,328 791,335" fill="none" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
+  <polyline points="785,465 788,472 791,465" fill="none" stroke="rgba(174,199,249,0.45)" stroke-width="0.9"/>
 
 </g>
 </svg>
