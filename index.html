@@ -537,76 +537,98 @@ footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
 </defs>
 <g clip-path="url(#c)">
 
-  <!-- ═══ SILHOUETTE LAYER — building volumes, back to front ═══ -->
+  <!-- ── LAYER 1: distant — low continuous city mass ── -->
+  <polygon points="
+    -20,520  -20,360
+    0,360    0,320   80,320   80,360
+    160,360  160,300  240,300  240,360
+    340,360  340,280  420,280  420,360
+    520,360  520,300  600,300  600,360
+    700,360  700,290  780,290  780,360
+    920,360  920,520"
+    fill="rgba(255,255,255,0.05)"/>
 
-  <!-- Layer 1 — distant, faintest: low continuous city mass -->
-  <polygon points="-20,520 -20,360 60,360 60,320 150,320 150,360 260,360 260,290 370,290 370,330 480,330 480,270 580,270 580,310 680,310 680,260 780,260 780,310 920,310 920,520"
+  <!-- ── LAYER 2: mid-distance — varied skyline ── -->
+  <!-- Mix of towers (vertical rectangles) and slabs (horizontal) -->
+  <polygon points="
+    -20,520  -20,400
+    60,400   60,240  120,240  120,400
+    200,400  200,180  240,180  240,400
+    320,400  320,300  400,300  400,400
+    460,400  460,120  500,120  500,400
+    580,400  580,200  640,200  640,400
+    720,400  720,160  760,160  760,400
+    840,400  840,300  920,300  920,520  -20,520"
     fill="rgba(255,255,255,0.07)"/>
 
-  <!-- Layer 2 — mid-distance: taller skyline with tower cluster -->
-  <polygon points="-20,520 -20,400 50,400 50,260 110,260 110,200 160,200 160,260 240,260 240,370 320,370 320,210 370,210 370,150 415,150 415,100 460,100 460,150 510,150 510,210 590,210 590,320 660,320 660,230 720,230 720,180 775,180 775,230 840,230 840,380 920,380 920,520"
-    fill="rgba(255,255,255,0.10)"/>
-
-  <!-- Layer 3 — foreground: bold skyline, pitched roofs + tower -->
-  <!-- Gabled house left, tower center, block right -->
-  <polygon points="-20,520 -20,430 40,430 40,320 90,320 115,275 140,320 200,320 200,400 280,400 280,240 330,240 330,420 410,420 410,290 450,290 450,200 490,200 490,290 530,290 530,400 610,400 610,280 670,280 670,400 750,400 750,310 790,310 815,265 840,310 920,310 920,520"
-    fill="rgba(255,255,255,0.13)"/>
-
-  <!-- Layer 4 — frontmost ground band: anchors the composition -->
-  <polygon points="-20,520 -20,465 920,465 920,520"
+  <!-- ── LAYER 3: mid-foreground — gabled houses + blocks ── -->
+  <!-- Gabled = base rect + triangle peak, no jagged notches -->
+  <polygon points="
+    -20,520  -20,420
+    40,420   40,340  80,340  80,420
+    120,420  120,300  160,260  200,300  200,420
+    260,420  260,360  340,360  340,420
+    380,420  380,280  420,280  420,420
+    480,420  480,320  520,270  560,320  560,420
+    620,420  620,260  680,260  680,420
+    740,420  740,300  780,260  820,300  820,420
+    920,420  920,520  -20,520"
     fill="rgba(255,255,255,0.09)"/>
 
-  <!-- ═══ TECHNICAL / PROGETTAZIONE OVERLAY ═══ -->
+  <!-- ── LAYER 4: foreground — dominant volumes ── -->
+  <!-- Bold tower left, slab center, tall tower right -->
+  <polygon points="
+    -20,520  -20,450
+    60,450   60,300  120,300  120,450
+    180,450  180,380  300,380  300,450
+    360,450  360,200  410,200  410,450
+    470,450  470,380  580,380  580,450
+    640,450  640,240  690,240  690,450
+    750,450  750,360  870,360  870,450
+    920,450  920,520  -20,520"
+    fill="rgba(255,255,255,0.07)"/>
 
-  <!-- Blueprint grid — very fine, covers entire canvas -->
-  <!-- Vertical lines every 60px -->
-  <line x1="60"  y1="0" x2="60"  y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="120" y1="0" x2="120" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="180" y1="0" x2="180" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="240" y1="0" x2="240" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="300" y1="0" x2="300" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="360" y1="0" x2="360" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="420" y1="0" x2="420" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="480" y1="0" x2="480" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="540" y1="0" x2="540" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="600" y1="0" x2="600" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="660" y1="0" x2="660" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="720" y1="0" x2="720" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="780" y1="0" x2="780" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="840" y1="0" x2="840" y2="520" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <!-- Horizontal lines every 60px -->
-  <line x1="0" y1="60"  x2="900" y2="60"  stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="120" x2="900" y2="120" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="180" x2="900" y2="180" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="240" x2="900" y2="240" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="300" x2="900" y2="300" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="360" x2="900" y2="360" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="420" x2="900" y2="420" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
-  <line x1="0" y1="480" x2="900" y2="480" stroke="rgba(174,199,249,0.07)" stroke-width="0.5"/>
+  <!-- ── LAYER 5: ground band — base anchor ── -->
+  <rect x="-20" y="465" width="940" height="55" fill="rgba(255,255,255,0.05)"/>
 
-  <!-- Accent: a single bold horizontal line at ground level — like a section cut -->
-  <line x1="0" y1="465" x2="900" y2="465" stroke="rgba(174,199,249,0.25)" stroke-width="1"/>
+  <!-- ── TECHNICAL OVERLAY ── -->
 
-  <!-- A vertical axis line — tall tower centerline, like a construction axis -->
-  <line x1="450" y1="0" x2="450" y2="465" stroke="rgba(174,199,249,0.15)" stroke-width="0.8" stroke-dasharray="6,6"/>
+  <!-- Blueprint grid -->
+  <line x1="60"  y1="0" x2="60"  y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="120" y1="0" x2="120" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="180" y1="0" x2="180" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="240" y1="0" x2="240" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="300" y1="0" x2="300" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="360" y1="0" x2="360" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="420" y1="0" x2="420" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="480" y1="0" x2="480" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="540" y1="0" x2="540" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="660" y1="0" x2="660" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="720" y1="0" x2="720" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="780" y1="0" x2="780" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="840" y1="0" x2="840" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="60"  x2="900" y2="60"  stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="120" x2="900" y2="120" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="180" x2="900" y2="180" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="240" x2="900" y2="240" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="300" x2="900" y2="300" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="360" x2="900" y2="360" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="420" x2="900" y2="420" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <line x1="0" y1="480" x2="900" y2="480" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
 
-  <!-- Dimension marks: height of the central tower -->
-  <!-- Top tick -->
-  <line x1="530" y1="100" x2="555" y2="100" stroke="rgba(174,199,249,0.35)" stroke-width="0.8"/>
-  <!-- Bottom tick at ground -->
-  <line x1="530" y1="465" x2="555" y2="465" stroke="rgba(174,199,249,0.35)" stroke-width="0.8"/>
-  <!-- Vertical dimension line -->
-  <line x1="542" y1="105" x2="542" y2="460" stroke="rgba(174,199,249,0.25)" stroke-width="0.7"/>
-  <!-- Arrow tips (simple) -->
-  <polyline points="538,108 542,100 546,108" fill="none" stroke="rgba(174,199,249,0.35)" stroke-width="0.8"/>
-  <polyline points="538,457 542,465 546,457" fill="none" stroke="rgba(174,199,249,0.35)" stroke-width="0.8"/>
+  <!-- Ground level accent line -->
+  <line x1="0" y1="465" x2="900" y2="465" stroke="rgba(174,199,249,0.18)" stroke-width="0.8"/>
 
-  <!-- Lime accent: single diagonal line cutting across — the design gesture -->
-  <line x1="0" y1="465" x2="900" y2="80" stroke="#dae343" stroke-width="1" opacity="0.45"/>
+  <!-- Construction axis — central tower -->
+  <line x1="435" y1="0" x2="435" y2="460" stroke="rgba(174,199,249,0.12)" stroke-width="0.7" stroke-dasharray="5,7"/>
 
-  <!-- Corner registration marks — top-right of the central tower silhouette -->
-  <polyline points="448,100 460,100 460,112" fill="none" stroke="rgba(174,199,249,0.4)" stroke-width="0.9"/>
-  <polyline points="452,465 440,465 440,453" fill="none" stroke="rgba(174,199,249,0.4)" stroke-width="0.9"/>
+  <!-- Height dimension marks on central tower -->
+  <line x1="418" y1="200" x2="408" y2="200" stroke="rgba(174,199,249,0.28)" stroke-width="0.8"/>
+  <line x1="418" y1="450" x2="408" y2="450" stroke="rgba(174,199,249,0.28)" stroke-width="0.8"/>
+  <line x1="413" y1="205" x2="413" y2="445" stroke="rgba(174,199,249,0.18)" stroke-width="0.7"/>
+  <polyline points="410,207 413,200 416,207" fill="none" stroke="rgba(174,199,249,0.28)" stroke-width="0.7"/>
+  <polyline points="410,443 413,450 416,443" fill="none" stroke="rgba(174,199,249,0.28)" stroke-width="0.7"/>
 
 </g>
 </svg>
