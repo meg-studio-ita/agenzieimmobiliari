@@ -120,7 +120,7 @@ bottom: 0;
 left: 0;
 width: 100%;
 height: 100%;
-opacity: 0.18;
+opacity: 1;   
 pointer-events: none;
 z-index: 0;
 }
@@ -537,42 +537,28 @@ footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
 </defs>
 <g clip-path="url(#c)">
 
-  <!-- LAYER 1 — deepest, most faded: large background slab far right -->
-  <!-- A wide horizontal residential block, bleeds right -->
-  <polygon points="520,520 520,180 620,180 620,100 780,100 780,180 940,180 940,520"
-    fill="rgba(174,199,249,0.06)"/>
+  <!-- LAYER 1 — furthest back: wide low-rise sprawl, full width -->
+  <polygon points="-20,520 -20,340 120,340 120,300 280,300 280,340 500,340 500,260 640,260 640,300 760,300 760,340 920,340 920,520"
+    fill="rgba(255,255,255,0.08)"/>
 
-  <!-- LAYER 2 — tall tower, center-right, slightly more visible -->
-  <!-- Classic rectangular tower block -->
-  <polygon points="640,520 640,60 720,60 720,520"
-    fill="rgba(174,199,249,0.07)"/>
+  <!-- LAYER 2 — mid-distance: varied skyline with towers and slabs -->
+  <polygon points="-20,520 -20,380 80,380 80,240 160,240 160,200 220,200 220,240 340,240 340,320 460,320 460,180 540,180 540,140 600,140 600,180 700,180 700,280 800,280 800,200 860,200 860,380 920,380 920,520"
+    fill="rgba(255,255,255,0.10)"/>
 
-  <!-- LAYER 3 — mid-rise with step profile, overlapping tower -->
-  <polygon points="560,520 560,220 600,220 600,160 700,160 700,220 780,220 780,340 820,340 820,520"
-    fill="rgba(174,199,249,0.09)"/>
+  <!-- LAYER 3 — mid-foreground: taller buildings, more defined skyline -->
+  <!-- Tower cluster center-right + gabled buildings left -->
+  <polygon points="-20,520 -20,420 60,420 60,300 110,300 130,260 150,300 200,300 200,360 280,360 280,220 340,220 340,160 380,160 380,100 420,100 420,160 460,160 460,220 520,220 520,300 580,300 580,200 640,200 640,300 700,300 700,360 760,360 760,260 820,260 820,380 920,380 920,520"
+    fill="rgba(255,255,255,0.12)"/>
 
-  <!-- LAYER 4 — pitched-roof villa silhouette, lower left of group -->
-  <!-- Gabled house shape: base + triangle roof -->
-  <polygon points="480,520 480,310 510,310 510,260 570,210 630,260 630,310 780,310 780,520"
-    fill="rgba(174,199,249,0.07)"/>
+  <!-- LAYER 4 — foreground: dominant volumes, sharp silhouette -->
+  <!-- Big tower left, gabled house center, slab right -->
+  <polygon points="-20,520 -20,460 40,460 40,280 100,280 100,460 160,460 160,340 240,340 260,290 280,340 360,340 360,420 440,420 440,200 480,200 480,420 560,420 560,320 640,320 640,420 700,420 700,300 780,300 780,440 920,440 920,520"
+    fill="rgba(255,255,255,0.14)"/>
 
-  <!-- LAYER 5 — foreground: tall narrow tower, rightmost, bleeds off canvas -->
-  <!-- Most opaque, creates depth contrast -->
-  <polygon points="800,520 800,120 870,120 870,520"
-    fill="rgba(174,199,249,0.11)"/>
-
-  <!-- LAYER 6 — foreground slim tower, overlaps the group, anchors right edge -->
-  <polygon points="740,520 740,200 790,200 790,520"
-    fill="rgba(174,199,249,0.10)"/>
-
-  <!-- LAYER 7 — small foreground block, lower, creates skyline base rhythm -->
-  <polygon points="500,520 500,360 560,360 560,300 660,300 660,360 760,360 760,520"
-    fill="rgba(174,199,249,0.08)"/>
-
-  <!-- LAYER 8 — frontmost: a low wide building at ground level, full width of right half -->
-  <!-- Gives the composition a strong ground line -->
-  <polygon points="460,520 460,400 940,400 940,520"
-    fill="rgba(174,199,249,0.07)"/>
+  <!-- LAYER 5 — frontmost: ground-level base band + a few prominent foreground volumes -->
+  <!-- Creates strong ground anchor like the base of the mountains in ref -->
+  <polygon points="-20,520 -20,460 120,460 120,400 200,400 220,360 240,400 380,400 380,460 500,460 500,380 560,380 560,460 680,460 680,400 740,400 760,360 780,400 920,400 920,520"
+    fill="rgba(255,255,255,0.16)"/>
 
 </g>
 </svg>
