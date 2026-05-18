@@ -537,82 +537,42 @@ footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
 </defs>
 <g clip-path="url(#c)">
 
-  <!-- Fine grid — very subtle, just enough to feel like a technical space -->
-  <line x1="0" y1="0" x2="900" y2="0" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="52" x2="900" y2="52" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="104" x2="900" y2="104" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="156" x2="900" y2="156" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="208" x2="900" y2="208" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="260" x2="900" y2="260" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="312" x2="900" y2="312" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="364" x2="900" y2="364" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="416" x2="900" y2="416" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="468" x2="900" y2="468" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="0" y1="520" x2="900" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <!-- LAYER 1 — deepest, most faded: large background slab far right -->
+  <!-- A wide horizontal residential block, bleeds right -->
+  <polygon points="520,520 520,180 620,180 620,100 780,100 780,180 940,180 940,520"
+    fill="rgba(174,199,249,0.06)"/>
 
-  <line x1="0" y1="0" x2="0" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="90" y1="0" x2="90" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="180" y1="0" x2="180" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="270" y1="0" x2="270" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="360" y1="0" x2="360" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="450" y1="0" x2="450" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="540" y1="0" x2="540" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="630" y1="0" x2="630" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="720" y1="0" x2="720" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="810" y1="0" x2="810" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
-  <line x1="900" y1="0" x2="900" y2="520" stroke="rgba(174,199,249,0.06)" stroke-width="0.5"/>
+  <!-- LAYER 2 — tall tower, center-right, slightly more visible -->
+  <!-- Classic rectangular tower block -->
+  <polygon points="640,520 640,60 720,60 720,520"
+    fill="rgba(174,199,249,0.07)"/>
 
-  <!-- === VOLUME PLANES — staggered, overlapping, offset ===
-       Reading from back to front. Each plane is a different depth/scale fragment.
-       They don't form a building — they suggest one. -->
+  <!-- LAYER 3 — mid-rise with step profile, overlapping tower -->
+  <polygon points="560,520 560,220 600,220 600,160 700,160 700,220 780,220 780,340 820,340 820,520"
+    fill="rgba(174,199,249,0.09)"/>
 
-  <!-- Large background plane — far right, tall, slight inset -->
-  <rect x="560" y="60" width="260" height="400" fill="rgba(174,199,249,0.04)" stroke="rgba(174,199,249,0.18)" stroke-width="1"/>
+  <!-- LAYER 4 — pitched-roof villa silhouette, lower left of group -->
+  <!-- Gabled house shape: base + triangle roof -->
+  <polygon points="480,520 480,310 510,310 510,260 570,210 630,260 630,310 780,310 780,520"
+    fill="rgba(174,199,249,0.07)"/>
 
-  <!-- Wide low plane — anchors the base, like a podium or floor plate -->
-  <rect x="80" y="310" width="680" height="130" fill="rgba(174,199,249,0.03)" stroke="rgba(174,199,249,0.14)" stroke-width="0.8"/>
+  <!-- LAYER 5 — foreground: tall narrow tower, rightmost, bleeds off canvas -->
+  <!-- Most opaque, creates depth contrast -->
+  <polygon points="800,520 800,120 870,120 870,520"
+    fill="rgba(174,199,249,0.11)"/>
 
-  <!-- Tall narrow tower — dominant vertical, left of center -->
-  <rect x="190" y="80" width="140" height="380" fill="rgba(174,199,249,0.05)" stroke="rgba(174,199,249,0.22)" stroke-width="1.2"/>
+  <!-- LAYER 6 — foreground slim tower, overlaps the group, anchors right edge -->
+  <polygon points="740,520 740,200 790,200 790,520"
+    fill="rgba(174,199,249,0.10)"/>
 
-  <!-- Mid plane — overlaps both tower and base, horizontal emphasis -->
-  <rect x="340" y="200" width="360" height="180" fill="rgba(174,199,249,0.04)" stroke="rgba(174,199,249,0.16)" stroke-width="0.8"/>
+  <!-- LAYER 7 — small foreground block, lower, creates skyline base rhythm -->
+  <polygon points="500,520 500,360 560,360 560,300 660,300 660,360 760,360 760,520"
+    fill="rgba(174,199,249,0.08)"/>
 
-  <!-- Small foreground plane — lower right, like a detached annex -->
-  <rect x="620" y="290" width="160" height="120" fill="rgba(174,199,249,0.06)" stroke="rgba(174,199,249,0.25)" stroke-width="1"/>
-
-  <!-- Small raised plane — upper left corner fragment, creates tension -->
-  <rect x="60" y="60" width="110" height="90" fill="rgba(174,199,249,0.04)" stroke="rgba(174,199,249,0.15)" stroke-width="0.8"/>
-
-  <!-- === AXIS LINES — thin, full-bleed, like section cuts or reference axes ===
-       Only 3: one horizontal, one vertical, one diagonal. Very precise. -->
-
-  <!-- Horizontal axis — passes through the whole composition at the "floor" level -->
-  <line x1="0" y1="310" x2="900" y2="310" stroke="rgba(174,199,249,0.22)" stroke-width="0.7" stroke-dasharray="2,8"/>
-
-  <!-- Vertical axis — slightly left of center, aligns with tower edge -->
-  <line x1="330" y1="0" x2="330" y2="520" stroke="rgba(174,199,249,0.18)" stroke-width="0.7" stroke-dasharray="2,8"/>
-
-  <!-- === ACCENT — single lime line, sharp diagonal, cuts across everything ===
-       This is the one "active" element in the composition. -->
-  <line x1="190" y1="460" x2="700" y2="80" stroke="#dae343" stroke-width="1.2" opacity="0.6"/>
-
-  <!-- === CORNER MARKS — tiny L-shaped registration marks, like drawing registration ===
-       Placed at the intersections of the planes, not at canvas corners.
-       These give a "designed" feel without being decorative. -->
-
-  <!-- Top-left corner of tower -->
-  <polyline points="190,90 190,80 200,80" fill="none" stroke="rgba(174,199,249,0.35)" stroke-width="0.8"/>
-  <!-- Bottom-right of tower -->
-  <polyline points="320,450 330,450 330,460" fill="none" stroke="rgba(174,199,249,0.35)" stroke-width="0.8"/>
-  <!-- Top-right of background plane -->
-  <polyline points="800,60 810,60 810,70" fill="none" stroke="rgba(174,199,249,0.3)" stroke-width="0.8"/>
-  <!-- Bottom-left of wide base -->
-  <polyline points="90,430 80,430 80,440" fill="none" stroke="rgba(174,199,249,0.3)" stroke-width="0.8"/>
-  <!-- Intersection: mid plane meets tower -->
-  <polyline points="330,200 340,200 340,210" fill="none" stroke="rgba(174,199,249,0.25)" stroke-width="0.7"/>
-  <!-- Small annex top-left -->
-  <polyline points="630,290 620,290 620,300" fill="none" stroke="rgba(174,199,249,0.25)" stroke-width="0.7"/>
+  <!-- LAYER 8 — frontmost: a low wide building at ground level, full width of right half -->
+  <!-- Gives the composition a strong ground line -->
+  <polygon points="460,520 460,400 940,400 940,520"
+    fill="rgba(174,199,249,0.07)"/>
 
 </g>
 </svg>
