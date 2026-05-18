@@ -9,7 +9,7 @@
 :root {
 --ink: #003e52;
 --ottanio: #003e52;
---ottanio-mid: #003e52;
+--ottanio-mid: #003e52;a
 --ottanio-light: #AEC7F9;
 --lime: #dae343;
 --lime-dark: #dae343;
@@ -332,43 +332,36 @@ gap: 20px;
 .proj-card {
 border-radius: 12px; overflow: hidden;
 border: 1px solid rgba(255,255,255,0.08);
-position: relative;
-height: 420px;
+background: var(--slate);
+display: flex; flex-direction: column;
 transition: transform .25s, box-shadow .25s;
 cursor: pointer;
 }
 .proj-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 .proj-img {
-position: absolute; inset: 0;
+width: 100%; height: 300px;
 background-size: cover;
 background-position: center;
+flex-shrink: 0;
 transition: transform .4s ease;
+overflow: hidden;
 }
 .proj-card:hover .proj-img { transform: scale(1.04); }
-.proj-overlay {
-position: absolute; inset: 0;
-background: linear-gradient(to top, rgba(4,20,30,0.92) 0%, rgba(4,20,30,0.5) 45%, rgba(4,20,30,0.05) 100%);
-}
-.proj-body {
-position: absolute; bottom: 0; left: 0; right: 0;
-padding: 24px;
-z-index: 2;
-}
+.proj-body { padding: 22px 24px 24px; flex: 1; }
 .proj-tag {
 font-family: 'DM Mono', monospace; font-size: 9px;
 color: var(--lime); letter-spacing: 0.14em; text-transform: uppercase;
 margin-bottom: 8px; display: block;
 }
 .proj-name { font-size: 17px; font-weight: 700; color: #fff; line-height: 1.25; }
-.proj-desc { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 6px; line-height: 1.5; }
+.proj-desc { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 6px; line-height: 1.5; }
 .proj-meta {
 display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;
 }
 .proj-pill {
 font-size: 10px; padding: 3px 10px; border-radius: 10px;
-border: 1px solid rgba(255,255,255,0.2);
-color: rgba(255,255,255,0.75); letter-spacing: 0.04em;
-background: rgba(255,255,255,0.05);
+border: 1px solid rgba(255,255,255,0.15);
+color: rgba(255,255,255,0.7); letter-spacing: 0.04em;
 }
 
 /*6. SERVIZI*/
@@ -750,8 +743,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
   <div class="proj-grid reveal">
     <!-- Card 1 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('megStudio_Barcis.jpg') center 40%/cover no-repeat;"></div>
-      <div class="proj-overlay"></div>
+      <div class="proj-img" style="background: url('megStudio_Barcis.jpg') center 60%/cover no-repeat;"></div>
       <div class="proj-body">
         <span class="proj-tag">Infrastruttura · Zona Montana · FVG</span>
         <div class="proj-name">Ponte sul Lago di Barcis</div>
@@ -766,7 +758,6 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
     <!-- Card 2 -->
     <div class="proj-card">
       <div class="proj-img" style="background: url('P23010 - PALAZZETTO DELLO SPORT SAPPADA.png') center 30%/cover no-repeat;"></div>
-      <div class="proj-overlay"></div>
       <div class="proj-body">
         <span class="proj-tag">Sport · Zona Montana · FVG</span>
         <div class="proj-name">Nuovo Palasport a Sappada</div>
@@ -780,8 +771,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
     </div>
     <!-- Card 3 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('250909_MEG_ZARA_V3_1_0060.jpg') center 25%/cover no-repeat;"></div>
-      <div class="proj-overlay"></div>
+      <div class="proj-img" style="background: url('250909_MEG_ZARA_V3_1_0060.jpg') center 55%/cover no-repeat;"></div>
       <div class="proj-body">
         <span class="proj-tag">Infrastruttura · Mobilità dolce · Veneto</span>
         <div class="proj-name">Ciclovia del Garda - Monte Baldo</div>
@@ -795,8 +785,7 @@ Siamo il partner tecnico che <strong>accompagna</strong> dalla valutazione dell'
     </div>
     <!-- Card 4 -->
     <div class="proj-card">
-      <div class="proj-img" style="background: url('Modellino.jpg') center center/contain no-repeat; background-color: #06303f;"></div>
-      <div class="proj-overlay"></div>
+      <div class="proj-img" style="background: url('Modellino.jpg') center center/cover no-repeat;"></div>
       <div class="proj-body">
         <span class="proj-tag">Sport · Zona Montana · FVG</span>
         <div class="proj-name">Area Sportiva ad Ampezzo</div>
